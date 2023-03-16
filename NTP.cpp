@@ -176,6 +176,23 @@ time_t NTP::epoch() {
 	return utcCurrent; 
 	}
 
+// this is more common name for what epoch returns, time() and timegm() are same
+time_t NTP::timegm() {
+	return epoch();
+	}
+time_t NTP::time() {
+	return epoch();
+	}
+
+time_t NTP::timelocal() {
+	return local;
+	}
+
+struct tm *NTP::localtime() {
+	currentTime();
+	return current;
+	}
+
 void NTP::currentTime() {
 	utcCurrent = utcTime + ((millis() - lastUpdate) / 1000); 
 	if (dstZone) {

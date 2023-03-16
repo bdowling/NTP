@@ -175,6 +175,34 @@ class NTP {
     time_t epoch();
 
     /**
+     * @brief get the Unix epoch timestamp
+     *
+     * @return time_t timestamp
+     */
+    time_t timegm();
+
+    /**
+     * @brief get the Unix epoch timestamp
+     *
+     * @return time_t timestamp
+     */
+    time_t time();
+
+    /**
+     * @brief get the Unix local timestamp
+     *
+     * @return time_t timestamp
+     */
+    time_t timelocal();
+
+    /**
+     * @brief get the Unix local time in seconds aka now()
+     *
+     * @return time_t timestamp
+     */
+    struct tm* localtime();
+
+    /**
      * @brief get the year
      * 
      * @return int year
